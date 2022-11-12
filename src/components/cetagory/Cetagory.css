@@ -1,0 +1,81 @@
+.cetagory {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.cetagory-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  row-gap: 30px;
+}
+
+.cetagory-wrapper a {
+  position: relative;
+  width: 100%;
+  background-color: var(--orange-clr);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px rgb(28, 28, 28);
+  transition: 0.4s;
+}
+
+.cetagory-wrapper a:hover {
+  transform: translateY(-10px);
+}
+
+a img {
+  width: 100%;
+}
+
+a h2 {
+  font-size: 2rem;
+  color: var(--white-clr);
+}
+
+@media screen and (max-width: 1000px) {
+  .cetagory-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .cetagory-wrapper {
+    width: 90%;
+  }
+  a h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cetagory-wrapper {
+    margin-top: 40px;
+    width: 95%;
+  }
+  a h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cetagory-wrapper {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  a h2 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .cetagory-wrapper {
+    width: 85%;
+    grid-template-columns: 1fr;
+  }
+  a h2 {
+    font-size: 1.3rem;
+  }
+}

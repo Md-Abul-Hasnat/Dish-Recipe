@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  background-color: var(--orange-clr);
+  text-align: center;
+  margin-top: 100px;
+}
+
+footer p {
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 450px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  footer p {
+    font-size: 0.7rem;
+  }
+}
