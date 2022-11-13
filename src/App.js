@@ -6,6 +6,9 @@ import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
 import SingleMeal from "./pages/singleMeal/SingleMeal";
 import GlobalContext from "./components/context/GlobalContext";
+import About from "./pages/about/About";
+import Gallery from "./pages/gallery/Gallery";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
           <Route path="/cetagory/dish/:id" element={<SingleMeal />} />
         </Routes>
@@ -22,13 +28,5 @@ function App() {
     </GlobalContext>
   );
 }
-
-// api url : https://www.themealdb.com/api.php
-
-// search meals by name : www.themealdb.com/api/json/v1/1/search.php?s= mealname
-// view meal detail by id : www.themealdb.com/api/json/v1/1/lookup.php?i= id here
-// look for a random meal : www.themealdb.com/api/json/v1/1/random.php
-// get all meal category : www.themealdb.com/api/json/v1/1/categories.php
-// filter meal by cetagory : www.themealdb.com/api/json/v1/1/filter.php?c=categoryhere
 
 export default App;

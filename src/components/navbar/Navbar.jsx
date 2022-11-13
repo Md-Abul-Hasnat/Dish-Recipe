@@ -34,17 +34,17 @@ const Navbar = () => {
         </li>
 
         <li>
-          <Link onClick={handleClick} to="/">
-            Services
+          <Link onClick={handleClick} to="/about">
+            About
           </Link>
         </li>
         <li>
-          <Link onClick={handleClick} to="/">
-            Pricing
+          <Link onClick={handleClick} to="/gallery">
+            Gallery
           </Link>
         </li>
         <li>
-          <Link onClick={handleClick} to="/">
+          <Link onClick={handleClick} to="/contact">
             Contact
           </Link>
         </li>
