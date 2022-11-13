@@ -18,7 +18,6 @@ function App() {
     </BrowserRouter>
   );
 }
-// hello
 
 // use font awesome :  <FontAwesomeIcon icon={faCoffee} />
 
