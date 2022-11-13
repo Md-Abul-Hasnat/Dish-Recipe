@@ -1,27 +1,27 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cetagory from "./pages/category/Category";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
+import GlobalContext from "./components/context/GlobalContext";
+import SingleMeal from "./pages/singleMeal/SingleMeal";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <GlobalContext>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
+          <Route path="/cetagory/dish/:id" element={<SingleMeal />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </GlobalContext>
   );
 }
-
-// use font awesome :  <FontAwesomeIcon icon={faCoffee} />
-
-// demo website : http://preview.themeforest.net/item/aaem-cafe-restaurant-mobile-template/full_screen_preview/21492190?_ga=2.232797022.1192689886.1668171366-633208275.1663460760
 
 // api url : https://www.themealdb.com/api.php
 

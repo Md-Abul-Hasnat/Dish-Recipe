@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import dish1 from "../../assets/img/dish2.jpg";
-import dish2 from "../../assets/img/seafood.jpg";
+import dish2 from "../../assets/img/dish3.jpg";
 import dish3 from "../../assets/img/pizza.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
 import "./Hero.css";
 
 const Hero = () => {
@@ -15,13 +14,12 @@ const Hero = () => {
     <section className="hero">
       <Swiper
         slidesPerView={1}
-        spaceBetween={0}
+        spaceBetween={2}
         loop={true}
         pagination={{
           clickable: true,
         }}
-        autoplay={true}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -48,7 +46,7 @@ const Hero = () => {
             <img src={dish2} alt="image1" />
             <div className="hero-text">
               <div>
-                <h1>Delicious Dish Menu </h1>
+                <h1>Delicious Dish Recipe </h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolore exercitationem, temporibus assumenda quam maxime

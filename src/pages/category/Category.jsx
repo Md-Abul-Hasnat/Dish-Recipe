@@ -33,9 +33,8 @@ const Category = () => {
       <main className="cetagories">
         <div className="cetagories-wrapper">
           {selectedCetagory.map((cetagory) => {
-            console.log(cetagory);
             return (
-              <article>
+              <article key={cetagory.idMeal}>
                 <div className="cetagory-img">
                   <img
                     src={cetagory.strMealThumb}
@@ -44,7 +43,10 @@ const Category = () => {
                 </div>
                 <div className="cetagory-bottom">
                   <h1>{strRuducer(cetagory.strMeal, 18)}...</h1>
-                  <Link className="btn" to="/">
+                  <Link
+                    className="btn"
+                    to={`/cetagory/dish/${cetagory.idMeal}`}
+                  >
                     View Detail
                   </Link>
                 </div>

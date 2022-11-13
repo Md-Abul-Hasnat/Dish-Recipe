@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { GlobalData } from "../context/GlobalContext";
 import "./Cetagory.css";
 
 const Cetagory = () => {
-  const location = useLocation();
+  const { cetagory } = useContext(GlobalData);
 
-  const [cetagories, setCetagories] = useState([]);
-
-  useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-      .then((res) => res.json())
-      .then((data) => setCetagories(data.categories.slice(0, 8)));
-  }, []);
+  const cetagories = cetagory.slice(0, 8);
 
   return (
     <section className="cetagory">

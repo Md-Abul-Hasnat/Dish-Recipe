@@ -7,6 +7,7 @@ footer {
 
 footer p {
   padding: 15px 0;
+  color: var(--white-clr);
 }
 
 @media screen and (max-width: 450px) {

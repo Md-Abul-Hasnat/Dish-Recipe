@@ -7,13 +7,22 @@ import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [navActive, setNavActive] = useState(false);
 
   function handleClick() {
     setClick(!click);
   }
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      setNavActive(true);
+    } else {
+      setNavActive(false);
+    }
+  });
+
   return (
-    <nav>
+    <nav className={navActive ? "nav nav-active" : "nav"}>
       <Link to="/" className="logo">
         <h1>Dishes</h1>
       </Link>
