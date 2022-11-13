@@ -49,6 +49,8 @@
 
 .dish-details h1 {
   margin-top: 15px;
+  font-family: sans-serif;
+  font-size: 1.7rem;
 }
 
 .dish-details p {
