@@ -1,14 +1,23 @@
 import React from "react";
 import Hero from "../../components/hero/Hero";
 import Cetagory from "../../components/cetagory/Cetagory";
-import Meals from "../../components/meals/Meals";
+import { useContext } from "react";
+import { UserContext } from "../../components/context/GlobalContext";
+import Loader from "../../components/loader/Loader";
 
 const Home = () => {
+  const { loading } = useContext(UserContext);
+
   return (
     <>
-      <Hero />
-      <Cetagory />
-      <Meals />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Hero />
+          <Cetagory />
+        </>
+      )}
     </>
   );
 };

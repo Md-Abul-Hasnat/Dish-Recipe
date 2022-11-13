@@ -24,7 +24,7 @@ const Hero = () => {
       >
         <SwiperSlide>
           <article>
-            <img src={dish1} alt="image1" />
+            <img src={dish3} alt="image1" />
             <div className="hero-text">
               <div>
                 <h1>Welcome To Dishes </h1>
@@ -62,7 +62,7 @@ const Hero = () => {
         </SwiperSlide>
         <SwiperSlide>
           <article>
-            <img src={dish3} alt="image1" />
+            <img src={dish1} alt="image1" />
             <div className="hero-text">
               <div>
                 <h1>Learn How To Cook </h1>

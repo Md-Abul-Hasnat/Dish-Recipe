@@ -1,12 +1,10 @@
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { GlobalData } from "../context/GlobalContext";
+import { UserContext } from "../context/GlobalContext";
 import "./Cetagory.css";
 
 const Cetagory = () => {
-  const { cetagory } = useContext(GlobalData);
-
-  const cetagories = cetagory.slice(0, 8);
+  const { cetagories } = useContext(UserContext);
 
   return (
     <section className="cetagory">
@@ -15,6 +13,7 @@ const Cetagory = () => {
         {cetagories.map((cetagory) => {
           return (
             <Link
+              onClick={() => window.scrollTo(0, 0)}
               state={{ cetagoryObj: cetagory }}
               key={cetagory.idCategory}
               to={`/cetagory/${cetagory.strCategory}`}

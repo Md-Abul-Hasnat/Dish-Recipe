@@ -1,13 +1,16 @@
 import { useEffect } from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { UserContext } from "../../components/context/GlobalContext";
+import Loader from "../../components/loader/Loader";
 import "./SingleMeal.css";
 
 const SingleMeal = () => {
   const id = useParams();
 
   const [selectedMeal, setSelectedMeal] = useState({});
-  const [loading, setLoading] = useState(false);
+  const { loading, setLoading } = useContext(UserContext);
 
   useEffect(() => {
     setLoading(true);
@@ -23,7 +26,7 @@ const SingleMeal = () => {
   return (
     <>
       {loading ? (
-        <h1>Loading</h1>
+        <Loader />
       ) : (
         <>
           <header className="dish-hero">

@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cetagory from "./pages/category/Category";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
-import GlobalContext from "./components/context/GlobalContext";
 import SingleMeal from "./pages/singleMeal/SingleMeal";
+import GlobalContext from "./components/context/GlobalContext";
 
 function App() {
   return (
