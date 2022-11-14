@@ -1,0 +1,137 @@
+.contact {
+  margin-top: 140px;
+  width: 100%;
+}
+
+.contact-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3%;
+}
+
+.contact-left {
+  width: 100%;
+  background-color: var(--orange-clr);
+  color: var(--white-clr);
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-left .envelop {
+  font-size: 7rem;
+}
+
+.contact-left p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-right h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: var(--font-Berkshire);
+  color: var(--orange-clr);
+}
+
+.contact-right input {
+  padding: 15px 10px;
+  margin-top: 15px;
+  background-color: rgb(221, 230, 233);
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.contact-right ::placeholder {
+  font-size: 1rem;
+}
+
+.contact-right textarea {
+  padding: 15px 10px;
+  margin-top: 15px;
+  background-color: rgb(221, 230, 233);
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.contact-right textarea::placeholder {
+  font-size: 1.2rem;
+}
+
+.send-btn {
+  padding: 10px 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact-left .envelop {
+    font-size: 5rem;
+  }
+
+  .contact-left p {
+    font-size: 1.3rem;
+  }
+
+  .contact-right h1 {
+    font-size: 2rem;
+  }
+
+  .contact-right input {
+    font-size: 0.9rem;
+  }
+
+  .contact-right textarea {
+    font-size: 0.9rem;
+    height: 200px;
+  }
+  .contact-right ::placeholder {
+    font-size: 1rem;
+  }
+
+  .contact-right textarea::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact-wrapper {
+    width: 85%;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .contact-left .envelop {
+    font-size: 3rem;
+  }
+
+  .contact-left p {
+    font-size: 1rem;
+  }
+  .send-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}

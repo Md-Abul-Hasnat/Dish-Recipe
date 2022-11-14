@@ -39,7 +39,7 @@ const About = () => {
               popularised in the 1960s with the release of Letraset sheets
               containing Lorem Ipsum passage
             </p>
-            <Link onClick={() => window.scrollTo(0, 0)} className="btn" to="/">
+            <Link className="btn" to="/">
               SEE OUR CETAGORY
             </Link>
           </article>

@@ -9,21 +9,27 @@ import GlobalContext from "./components/context/GlobalContext";
 import About from "./pages/about/About";
 import Gallery from "./pages/gallery/Gallery";
 import Contact from "./pages/contact/Contact";
+import ScrollTop from "./components/scrollTop/ScrollTop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <GlobalContext>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
-          <Route path="/cetagory/dish/:id" element={<SingleMeal />} />
-        </Routes>
-        <Footer />
+        <ScrollTop>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
+            <Route path="/cetagory/dish/:id" element={<SingleMeal />} />
+          </Routes>
+          <Footer />
+        </ScrollTop>
+        <ToastContainer />
       </BrowserRouter>
     </GlobalContext>
   );

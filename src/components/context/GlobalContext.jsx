@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
 
 export const UserContext = createContext();
 
 const GlobalContext = ({ children }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [cetagories, setCetagories] = useState([]);
 
-  useEffect(() => {
-    setLoading(true);
+  useLayoutEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then((res) => res.json())
       .then((data) => {

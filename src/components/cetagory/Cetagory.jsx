@@ -13,7 +13,6 @@ const Cetagory = () => {
         {cetagories.map((cetagory) => {
           return (
             <Link
-              onClick={() => window.scrollTo(0, 0)}
               state={{ cetagoryObj: cetagory }}
               key={cetagory.idCategory}
               to={`/cetagory/${cetagory.strCategory}`}

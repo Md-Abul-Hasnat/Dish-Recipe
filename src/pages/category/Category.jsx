@@ -57,7 +57,6 @@ const Category = () => {
                     <div className="cetagory-bottom">
                       <h1>{strRuducer(cetagory.strMeal, 18)}...</h1>
                       <Link
-                        onClick={() => window.scrollTo(0, 0)}
                         className="btn"
                         to={`/cetagory/dish/${cetagory.idMeal}`}
                       >
