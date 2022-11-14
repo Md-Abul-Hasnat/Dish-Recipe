@@ -15,6 +15,7 @@
 
 .nav.nav-active {
   background-color: var(--orange-clr);
+  box-shadow: 0px 2px 10px black;
 }
 
 .nav .nav-menu {

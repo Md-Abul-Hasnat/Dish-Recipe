@@ -13,7 +13,9 @@ const GlobalContext = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setCetagories(
-          data.categories.filter((ceta) => ceta.idCategory !== "7")
+          data.categories
+            .slice(0, data.categories.length - 1)
+            .filter((ceta) => ceta.idCategory !== "7")
         );
         setLoading(false);
       });
