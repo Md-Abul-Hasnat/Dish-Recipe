@@ -1,0 +1,151 @@
+.about {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.about-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3%;
+}
+
+.about-left {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-left img {
+  width: 100%;
+  height: 340px;
+  border-radius: 10px;
+}
+
+.about-left .about-bottom-img {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  object-fit: cover;
+}
+
+.about-right > h1 {
+  font-size: 2.5rem;
+  color: rgb(98, 96, 96);
+}
+.about-right > p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgb(98, 96, 96);
+  margin-bottom: 30px;
+}
+
+.slideer {
+  margin-top: 140px;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/img/dish5.jpg");
+  background-position: center;
+}
+
+.slideer .mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slideer .mySwiper article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--white-clr);
+  margin-bottom: 20px;
+}
+
+.mySwiper p {
+  padding: 0 150px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--white-clr);
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .about-wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .about-right > h1 {
+    font-size: 2rem;
+  }
+  .about-right > p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .mySwiper p {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about-wrapper {
+    width: 85%;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .about-left .about-bottom-img {
+    left: -30px;
+    width: 250px;
+    height: 200px;
+  }
+  .mySwiper p {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-wrapper {
+    width: 85%;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .about-left .about-bottom-img {
+    top: 60%;
+    width: 190px;
+    height: 160px;
+  }
+  .about-right > h1 {
+    font-size: 1.7rem;
+  }
+  .mySwiper p {
+    padding: 0 30px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about-left img {
+    height: 280px;
+  }
+  .about-wrapper {
+    row-gap: 50px;
+  }
+  .mySwiper p {
+    padding: 0 20px;
+    font-size: 1.2rem;
+  }
+}
