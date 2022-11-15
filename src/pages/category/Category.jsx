@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import "./category.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Category = () => {
   const { cetagoryName } = useParams();
@@ -46,7 +47,8 @@ const Category = () => {
                 return (
                   <article key={cetagory.idMeal}>
                     <div className="cetagory-img">
-                      <img
+                      <LazyLoadImage
+                        effect="blur"
                         src={cetagory.strMealThumb}
                         alt={cetagory.strMealThumb}
                       />

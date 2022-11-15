@@ -11,6 +11,54 @@ import gallery8 from "../../assets/img/potato.jpg";
 import gallery9 from "../../assets/img/pizza.jpg";
 
 const Gallery = () => {
+  const gallertyData = [
+    {
+      text: "Tasty Rice",
+      img: gallery1,
+      id: 1,
+    },
+    {
+      text: "Sea Food",
+      img: gallery2,
+      id: 2,
+    },
+    {
+      text: "Beef",
+      img: gallery3,
+      id: 3,
+    },
+    {
+      text: "Chicken",
+      img: gallery4,
+      id: 4,
+    },
+    {
+      text: "Fish",
+      img: gallery5,
+      id: 5,
+    },
+    {
+      text: "Vegitable Rool",
+      img: gallery6,
+      id: 6,
+    },
+    {
+      text: "Sea Food",
+      img: gallery7,
+      id: 7,
+    },
+    {
+      text: "Delicious Dish",
+      img: gallery8,
+      id: 8,
+    },
+    {
+      text: "Pizza",
+      img: gallery9,
+      id: 9,
+    },
+  ];
+
   return (
     <>
       <header className="sub-header">
@@ -21,60 +69,16 @@ const Gallery = () => {
       </header>
       <main className="gallery">
         <div className="gallery-wrapper">
-          <article>
-            <img src={gallery1} alt="Gallery Image" />
-            <div className="gallery-name">
-              <h1>Tasty Rice</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery2} alt="Gallery Image" />
-            <div className="gallery-name">
-              <h1>Sea Food</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery3} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Beef</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery4} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Chicken</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery5} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Fish</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery6} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Vegitable Rool</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery7} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Sea Food</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery8} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Delicious Dish</h1>
-            </div>
-          </article>
-          <article>
-            <img src={gallery9} alt=" Gallery Image" />
-            <div className="gallery-name">
-              <h1>Pizza</h1>
-            </div>
-          </article>
+          {gallertyData.map((data) => {
+            return (
+              <article key={data.id}>
+                <img src={data.img} alt=" Gallery Image" />
+                <div className="gallery-name">
+                  <h1>{data.text}</h1>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </main>
     </>

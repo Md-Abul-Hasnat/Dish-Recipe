@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import "./SingleMeal.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SingleMeal = () => {
   const id = useParams();
@@ -39,7 +40,8 @@ const SingleMeal = () => {
 
           <main className="dish-details">
             <div className="dish-top">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 src={selectedMeal.strMealThumb}
                 alt={selectedMeal.strMealThumb}
               />

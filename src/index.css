@@ -4,10 +4,11 @@
 :root {
   --font-Berkshire: "Berkshire Swash", cursive;
   --font-roboto: "Roboto", sans-serif;
-  --orange-clr: #ff4301;
-  --white-clr: #fff;
+  /* --orange-clr: #f05454; */
   --light-gray: #333;
+  --white-clr: #f5f5f5;
   --footer-bg: #263238;
+  --orange-clr: #e14106;
 }
 
 ::-webkit-scrollbar {

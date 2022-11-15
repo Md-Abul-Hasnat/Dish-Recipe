@@ -5,6 +5,7 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/GlobalContext";
 import Loader from "../loader/Loader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SearchResult = () => {
   const { loading, setLoading } = useContext(UserContext);
@@ -40,7 +41,11 @@ const SearchResult = () => {
                   return (
                     <article key={dish.idMeal} className="dish">
                       <div className="top">
-                        <img src={dish.strMealThumb} alt="image" />
+                        <LazyLoadImage
+                          effect="blur"
+                          src={dish.strMealThumb}
+                          alt="image"
+                        />
                       </div>
                       <div className="bottom">
                         <h1>{dish.strMeal}</h1>
