@@ -64,6 +64,8 @@ a {
 }
 
 .main-title h1 {
+  text-align: center;
+  width: 100%;
   font-family: var(--font-Berkshire);
   position: absolute;
   top: 50%;

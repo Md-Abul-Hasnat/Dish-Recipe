@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import dish1 from "../../assets/img/dish2.jpg";
 import dish2 from "../../assets/img/dish3.jpg";
 import dish3 from "../../assets/img/pizza.jpg";
@@ -8,8 +7,20 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Hero.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  function handleInputSubmit(e) {
+    e.preventDefault();
+
+    setInputValue("");
+    navigate(`/search/${inputValue}`);
+  }
+
   return (
     <section className="hero">
       <Swiper
@@ -34,9 +45,16 @@ const Hero = () => {
                   aspernatur iusto ex dolores saepe odio! temporibus assumenda
                   quam maxime aspernatur iusto ex dolores saepe odio!
                 </p>
-                <Link className="btn" to="/">
-                  View Menu
-                </Link>
+                <form onSubmit={handleInputSubmit}>
+                  <input
+                    onChange={(e) => setInputValue(e.target.value)}
+                    type="text"
+                    value={inputValue}
+                    placeholder="Search Recipe"
+                    required
+                  />
+                  <button type="submit">Search</button>
+                </form>
               </div>
             </div>
           </article>
@@ -53,9 +71,16 @@ const Hero = () => {
                   aspernatur iusto ex dolores saepe odio! temporibus assumenda
                   quam maxime aspernatur iusto ex dolores saepe odio!
                 </p>
-                <Link className="btn" to="/">
-                  View Menu
-                </Link>
+                <form onSubmit={handleInputSubmit}>
+                  <input
+                    onChange={(e) => setInputValue(e.target.value)}
+                    type="text"
+                    value={inputValue}
+                    placeholder="Search Recipe"
+                    required
+                  />
+                  <button type="submit">Search</button>
+                </form>
               </div>
             </div>
           </article>
@@ -72,9 +97,16 @@ const Hero = () => {
                   aspernatur iusto ex dolores saepe odio! temporibus assumenda
                   quam maxime aspernatur iusto ex dolores saepe odio!
                 </p>
-                <Link className="btn" to="/">
-                  View Menu
-                </Link>
+                <form onSubmit={handleInputSubmit}>
+                  <input
+                    onChange={(e) => setInputValue(e.target.value)}
+                    type="text"
+                    value={inputValue}
+                    placeholder="Search Recipe"
+                    required
+                  />
+                  <button type="submit">Search</button>
+                </form>
               </div>
             </div>
           </article>

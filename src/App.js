@@ -12,6 +12,7 @@ import Contact from "./pages/contact/Contact";
 import ScrollTop from "./components/scrollTop/ScrollTop";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SearchResult from "./components/searchResult/SearchResult";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/search/:recipe" element={<SearchResult />} />
             <Route path="/cetagory/:cetagoryName" element={<Cetagory />} />
-            <Route path="/cetagory/dish/:id" element={<SingleMeal />} />
+            <Route path="/dish/:id" element={<SingleMeal />} />
           </Routes>
           <Footer />
         </ScrollTop>

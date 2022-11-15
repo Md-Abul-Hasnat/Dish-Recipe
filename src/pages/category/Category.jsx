@@ -56,10 +56,7 @@ const Category = () => {
                     </div>
                     <div className="cetagory-bottom">
                       <h1>{strRuducer(cetagory.strMeal, 18)}...</h1>
-                      <Link
-                        className="btn"
-                        to={`/cetagory/dish/${cetagory.idMeal}`}
-                      >
+                      <Link className="btn" to={`/dish/${cetagory.idMeal}`}>
                         View Detail
                       </Link>
                     </div>

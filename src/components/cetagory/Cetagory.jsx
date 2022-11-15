@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/GlobalContext";
@@ -5,6 +6,12 @@ import "./Cetagory.css";
 
 const Cetagory = () => {
   const { cetagories } = useContext(UserContext);
+  const imgref = useRef();
+
+  function submit(e) {
+    e.preventDefault();
+    console.log(imgref.current.value);
+  }
 
   return (
     <section className="cetagory">
