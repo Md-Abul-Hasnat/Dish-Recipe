@@ -63,7 +63,7 @@ const Hero = () => {
             <img src={dish2} alt="image1" />
             <div className="hero-text">
               <div>
-                <h1>Delicious Dish Recipe </h1>
+                <h1>Delicious Recipe </h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolore exercitationem, temporibus assumenda quam maxime
