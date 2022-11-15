@@ -1,5 +1,5 @@
 import React from "react";
-import dish1 from "../../assets/img/dish2.jpg";
+import dish1 from "../../assets/img/dish1.jpg";
 import dish2 from "../../assets/img/dish3.jpg";
 import dish3 from "../../assets/img/pizza.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +38,7 @@ const Hero = () => {
             <img src={dish3} alt="image1" />
             <div className="hero-text">
               <div>
-                <h1>Welcome To Dishes </h1>
+                <h1>Looking For Your Favourite Recipe ? </h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolore exercitationem, temporibus assumenda <br /> quam maxime

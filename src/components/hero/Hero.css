@@ -104,12 +104,10 @@ form button {
     font-size: 0.9rem;
   }
   form input {
-    padding: 8px 10px;
     font-size: 0.8rem;
   }
 
   form button {
-    padding: 10px;
     font-size: 0.7rem;
   }
 }

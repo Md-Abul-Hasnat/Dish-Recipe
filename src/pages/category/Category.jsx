@@ -9,14 +9,13 @@ const Category = () => {
   const { cetagoryName } = useParams();
   const location = useLocation();
 
-  const { loading, setLoading } = useContext(UserContext);
+  const [loading, setLoading] = useState(true);
 
   const { strCategory, strCategoryThumb } = location.state.cetagoryObj;
 
   const [selectedCetagory, setselectedCetagory] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
     fetch(
       `https://www.themealdb.com/api/json/v1/1/filter.php?c=${cetagoryName}`
     )

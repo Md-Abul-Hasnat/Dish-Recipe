@@ -1,13 +1,13 @@
 import React from "react";
 import "./Gallery.css";
-import galleryHeadImg from "../../assets/img/seafood.jpg";
+import galleryHeadImg from "../../assets/img/samosa.jpg";
 import gallery1 from "../../assets/img/dish1.jpg";
 import gallery2 from "../../assets/img/dish4.jpg";
 import gallery3 from "../../assets/img/dish5.jpg";
 import gallery4 from "../../assets/img/chicken.jpg";
 import gallery5 from "../../assets/img/fish.jpg";
 import gallery6 from "../../assets/img/roll.jpg";
-import gallery7 from "../../assets/img/samosa.jpg";
+import gallery7 from "../../assets/img/seafood.jpg";
 import gallery8 from "../../assets/img/potato.jpg";
 import gallery9 from "../../assets/img/pizza.jpg";
 
@@ -61,7 +61,7 @@ const Gallery = () => {
           <article>
             <img src={gallery7} alt=" Gallery Image" />
             <div className="gallery-name">
-              <h1>Samosa</h1>
+              <h1>Sea Food</h1>
             </div>
           </article>
           <article>

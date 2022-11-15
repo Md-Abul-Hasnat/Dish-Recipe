@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav className={navActive ? "nav nav-active" : "nav"}>
       <Link to="/" className="logo">
-        <h1>Dishes</h1>
+        <h1>Recipe</h1>
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>

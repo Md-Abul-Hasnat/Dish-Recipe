@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchResult.css";
-import img from "../../assets/img/dish1.jpg";
+import img from "../../assets/img/search-bg.jpg";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -13,7 +13,6 @@ const SearchResult = () => {
   const { loading, setLoading } = useContext(UserContext);
   const { recipe } = useParams();
   const [dishes, setdishes] = useState([]);
-  console.log(dishes);
 
   useEffect(() => {
     setLoading(true);
