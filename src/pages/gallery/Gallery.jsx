@@ -1,4 +1,3 @@
-import React from "react";
 import "./Gallery.css";
 import galleryHeadImg from "../../assets/img/samosa.jpg";
 import gallery1 from "../../assets/img/dish1.jpg";

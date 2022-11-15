@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./Contact.css";
 import img from "../../assets/img/phone.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

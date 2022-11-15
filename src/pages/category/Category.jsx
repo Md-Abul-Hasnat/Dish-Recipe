@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import { useState, useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
-import { UserContext } from "../../components/context/GlobalContext";
 import Loader from "../../components/loader/Loader";
 import "./category.css";
 

@@ -1,8 +1,7 @@
-import React from "react";
+import { UserContext } from "../../components/context/GlobalContext";
+import { useContext } from "react";
 import Hero from "../../components/hero/Hero";
 import Cetagory from "../../components/cetagory/Cetagory";
-import { useContext } from "react";
-import { UserContext } from "../../components/context/GlobalContext";
 import Loader from "../../components/loader/Loader";
 
 const Home = () => {

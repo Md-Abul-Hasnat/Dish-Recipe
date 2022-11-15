@@ -1,11 +1,8 @@
-import React from "react";
 import "./SearchResult.css";
 import img from "../../assets/img/search-bg.jpg";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
 import { UserContext } from "../context/GlobalContext";
 import Loader from "../loader/Loader";
 
