@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import MotionComponent from "../../components/motionComponent/MotionComponent";
 
 const Contact = () => {
   const form = useRef();
@@ -49,50 +50,57 @@ const Contact = () => {
 
   return (
     <>
-      <header className="sub-header">
-        <img src={img} alt="Image" />
-        <div className="main-title">
-          <h1>Contact Us</h1>
-        </div>
-      </header>
-      <main className="contact">
-        <div className="contact-wrapper">
-          <div className="contact-left">
-            <FontAwesomeIcon
-              className="icon envelop"
-              icon={faEnvelopeOpenText}
-            />
-            <p>
-              If you have any questions or just want to get in touch ,use the
-              form . We look forward to hearing from you!
-            </p>
+      <MotionComponent>
+        <header className="sub-header">
+          <img src={img} alt="Image" />
+          <div className="main-title">
+            <h1>Contact Us</h1>
           </div>
-          <div className="contact-right">
-            <h1>Contact Form</h1>
-            <form ref={form} onSubmit={sendEmail}>
-              <input type="text" placeholder="Your Name" name="name" required />
-              <br />
-              <input
-                type="text"
-                name="email"
-                placeholder="Your Email"
-                required
+        </header>
+        <main className="contact">
+          <div className="contact-wrapper">
+            <div className="contact-left">
+              <FontAwesomeIcon
+                className="icon envelop"
+                icon={faEnvelopeOpenText}
               />
-              <br />
+              <p>
+                If you have any questions or just want to get in touch ,use the
+                form . We look forward to hearing from you!
+              </p>
+            </div>
+            <div className="contact-right">
+              <h1>Contact Form</h1>
+              <form ref={form} onSubmit={sendEmail}>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  name="name"
+                  required
+                />
+                <br />
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <br />
 
-              <textarea
-                placeholder="Message"
-                name="message"
-                required
-              ></textarea>
-              <br />
-              <button className="btn send-btn" type="submit">
-                Send
-              </button>
-            </form>
+                <textarea
+                  placeholder="Message"
+                  name="message"
+                  required
+                ></textarea>
+                <br />
+                <button className="btn send-btn" type="submit">
+                  Send
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </MotionComponent>
     </>
   );
 };

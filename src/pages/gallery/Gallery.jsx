@@ -9,6 +9,7 @@ import gallery6 from "../../assets/img/roll.jpg";
 import gallery7 from "../../assets/img/seafood.jpg";
 import gallery8 from "../../assets/img/potato.jpg";
 import gallery9 from "../../assets/img/pizza.jpg";
+import MotionComponent from "../../components/motionComponent/MotionComponent";
 
 const Gallery = () => {
   const gallertyData = [
@@ -61,26 +62,28 @@ const Gallery = () => {
 
   return (
     <>
-      <header className="sub-header">
-        <img src={galleryHeadImg} alt="Image" />
-        <div className="main-title">
-          <h1>Gallery</h1>
-        </div>
-      </header>
-      <main className="gallery">
-        <div className="gallery-wrapper">
-          {gallertyData.map((data) => {
-            return (
-              <article key={data.id}>
-                <img src={data.img} alt=" Gallery Image" />
-                <div className="gallery-name">
-                  <h1>{data.text}</h1>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </main>
+      <MotionComponent>
+        <header className="sub-header">
+          <img src={galleryHeadImg} alt="Image" />
+          <div className="main-title">
+            <h1>Gallery</h1>
+          </div>
+        </header>
+        <main className="gallery">
+          <div className="gallery-wrapper">
+            {gallertyData.map((data) => {
+              return (
+                <article key={data.id}>
+                  <img src={data.img} alt=" Gallery Image" />
+                  <div className="gallery-name">
+                    <h1>{data.text}</h1>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </main>
+      </MotionComponent>
     </>
   );
 };

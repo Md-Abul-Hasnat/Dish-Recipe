@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import "./SingleMeal.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import MotionComponent from "../../components/motionComponent/MotionComponent";
 
 const SingleMeal = () => {
   const id = useParams();
@@ -28,39 +29,41 @@ const SingleMeal = () => {
         <Loader />
       ) : (
         <>
-          <header className="dish-hero">
-            <img
-              src={selectedMeal.strMealThumb}
-              alt={selectedMeal.strMealThumb}
-            />
-            <div className="dish-title">
-              <h1>{selectedMeal.strMeal}</h1>
-            </div>
-          </header>
-
-          <main className="dish-details">
-            <div className="dish-top">
-              <LazyLoadImage
-                effect="blur"
+          <MotionComponent>
+            <header className="dish-hero">
+              <img
                 src={selectedMeal.strMealThumb}
                 alt={selectedMeal.strMealThumb}
               />
-              <h1>Name : {selectedMeal.strMeal}</h1>
-              <h1>Region : {selectedMeal.strArea}</h1>
-              <h1>Cetagory : {selectedMeal.strCategory}</h1>
-            </div>
+              <div className="dish-title">
+                <h1>{selectedMeal.strMeal}</h1>
+              </div>
+            </header>
 
-            <div>
-              <iframe
-                src={`https://www.youtube.com/embed/${ytUrl[1]}`}
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-              <p>
-                <span> Process</span> : {selectedMeal.strInstructions}
-              </p>
-            </div>
-          </main>
+            <main className="dish-details">
+              <div className="dish-top">
+                <LazyLoadImage
+                  effect="blur"
+                  src={selectedMeal.strMealThumb}
+                  alt={selectedMeal.strMealThumb}
+                />
+                <h1>Name : {selectedMeal.strMeal}</h1>
+                <h1>Region : {selectedMeal.strArea}</h1>
+                <h1>Cetagory : {selectedMeal.strCategory}</h1>
+              </div>
+
+              <div>
+                <iframe
+                  src={`https://www.youtube.com/embed/${ytUrl[1]}`}
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
+                <p>
+                  <span> Process</span> : {selectedMeal.strInstructions}
+                </p>
+              </div>
+            </main>
+          </MotionComponent>
         </>
       )}
     </>

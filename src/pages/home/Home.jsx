@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Hero from "../../components/hero/Hero";
 import Cetagory from "../../components/cetagory/Cetagory";
 import Loader from "../../components/loader/Loader";
+import MotionComponent from "../../components/motionComponent/MotionComponent";
 
 const Home = () => {
   const { loading } = useContext(UserContext);
@@ -13,8 +14,10 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          <Hero />
-          <Cetagory />
+          <MotionComponent>
+            <Hero />
+            <Cetagory />
+          </MotionComponent>
         </>
       )}
     </>
